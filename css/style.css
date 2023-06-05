@@ -26,3 +26,18 @@
     border-width: 7px 0px;
     border-style: solid;
 }
+
+.page-name {
+    font-family: 'Inika';
+    font-style: normal;
+}
+
+.step-button {
+    background: #006969;
+    border-radius: 7px;
+    border-width: 1px;
+}
+
+.step-button-active {
+    background: #45A77B;
+}

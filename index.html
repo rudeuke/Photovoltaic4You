@@ -7,6 +7,7 @@
     <title>Photovoltaic4You</title>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inika' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
@@ -40,665 +41,698 @@
         <img class="baner-border img-fluid" src="img/house.jpg" alt="Wizualizacja fotowoltaiki na dachu">
     </header>
 
-    <main>
+    <main class="bg-light">
         <div class="container">
-            <div id="calc">
-                <!-- selection form -->
-                <form id="calc-form">
-                    <!-- form steps -->
-                    <div>
-                        <ul class="nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-center">
-                                    <span class="badge">1</span>
-                                    <span>Dane użytkownika</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link text-center">
-                                    <span class="badge">2</span>
-                                    <span>Zużycie energii</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link text-center">
-                                    <span class="badge">3</span>
-                                    <span>Zabudowa paneli</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link text-center">
-                                    <span class="badge">4</span>
-                                    <span>Parametry instalacji</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="" class="nav-link text-center">
-                                    <span class="badge">5</span>
-                                    <span>Analiza opłacalności</span>
-                                </a>
-                            </li>
-                        </ul>
+            <h2 class="page-section-heading text-center py-4 page-name">Kalkulator</h2>
+        </div>
+        <div class="container" id="calc">
+            <!-- selection form -->
+            <form id="calc-form">
+                <!-- form steps -->
+                <!-- <nav class="navbar navbar-expand-lg"> -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col px-0">
+                                <button class="step-button step-button-active text-white w-100 p-3">
+                                    Dane użytkownika
+                                </button>
+                            </div>
+                            <div class="col px-0">
+                                <button class="step-button text-white w-100 p-3">
+                                    Zużycie energii
+                                </button>
+                            </div>
+                            <div class="col px-0">
+                                <button class="step-button text-white w-100 p-3">
+                                    Zabudowa paneli
+                                </button>
+                            </div>
+                            <div class="col px-0">
+                                <button class="step-button text-white w-100 p-3">
+                                    Parametry instalacji
+                                </button>
+                            </div>
+                            <div class="col px-0">
+                                <button class="step-button text-white w-100 p-3">
+                                    Analiza opłacalności
+                                </button>
+                            </div>
+                          </div>
+                        <!-- <div class="row navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav w-100">
+                                <li class="nav-item">
+                                    <button class="step-button step-button-active">
+                                        <a class="nav-link text-center text-white">
+                                            <span>Dane użytkownika</span>
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="step-button">
+                                        <a href="" class="nav-link text-center text-white">
+                                            <span>Zużycie energii</span>
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="step-button">
+                                        <a href="" class="nav-link text-center text-white">
+                                            <span>Zabudowa paneli</span>
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="step-button">
+                                        <a href="" class="nav-link text-center text-white">
+                                            <span>Parametry instalacji</span>
+                                        </a>
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="step-button">
+                                        <a href="" class="nav-link text-center text-white">
+                                            <span>Analiza opłacalności</span>
+                                        </a>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div> -->
                     </div>
-                    <hr>
-                    <div class="tab-content">
-                        <!-- user -->
-                        <div id="user-tab">
-                            <div class="row">
-                                <!-- form section -->
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Typ użytkownika:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="clientType">
-                                                        <option label="wybierz" value="" selected="selected">
-                                                            wybierz
-                                                        </option>
-                                                        <option label="osoba fizyczna" value="person">
-                                                            osoba fizyczna
-                                                        </option>
-                                                        <option label="przedsiębiorstwo" value="company">
-                                                            przedsiębiorstwo
-                                                        </option>
-                                                    </select>
-                                                </div>
+                </nav>
+                <hr>
+                <div class="tab-content">
+                    <!-- user -->
+                    <div id="user-tab">
+                        <div class="row">
+                            <!-- form section -->
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Typ użytkownika:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="clientType">
+                                                    <option label="wybierz" value="" selected="selected">
+                                                        wybierz
+                                                    </option>
+                                                    <option label="osoba fizyczna" value="person">
+                                                        osoba fizyczna
+                                                    </option>
+                                                    <option label="przedsiębiorstwo" value="company">
+                                                        przedsiębiorstwo
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6">
-                                                Odliczam VAT od ceny zakupu instalacji
-                                                fotowoltaicznej oraz kosztów energii
-                                                elektrycznej:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="companyVatDeduct">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="nie" value="n">nie
-                                                        </option>
-                                                        <option label="tak" value="y">tak
-                                                        </option>
-                                                    </select>
-                                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6">
+                                            Odliczam VAT od ceny zakupu instalacji
+                                            fotowoltaicznej oraz kosztów energii
+                                            elektrycznej:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="companyVatDeduct">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="nie" value="n">nie
+                                                    </option>
+                                                    <option label="tak" value="y">tak
+                                                    </option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Województwo:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="region">
-                                                        <option label="wybierz" value="" selected="selected">
-                                                            wybierz</option>
-                                                        <option label="dolnośląskie" value="3">
-                                                            dolnośląskie</option>
-                                                        <option label="kujawsko-pomorskie" value="4">
-                                                            kujawsko-pomorskie</option>
-                                                        <option label="lubelskie" value="6">
-                                                            lubelskie</option>
-                                                        <option label="lubuskie" value="7">
-                                                            lubuskie</option>
-                                                        <option label="łódzkie" value="5">
-                                                            łódzkie</option>
-                                                        <option label="małopolskie" value="1">
-                                                            małopolskie</option>
-                                                        <option label="mazowieckie" value="8">
-                                                            mazowieckie</option>
-                                                        <option label="opolskie" value="9">
-                                                            opolskie</option>
-                                                        <option label="podkarpackie" value="10">
-                                                            podkarpackie</option>
-                                                        <option label="podlaskie" value="11">
-                                                            podlaskie</option>
-                                                        <option label="pomorskie" value="12">
-                                                            pomorskie</option>
-                                                        <option label="śląskie" value="2">
-                                                            śląskie</option>
-                                                        <option label="świętokrzyskie" value="13">
-                                                            świętokrzyskie</option>
-                                                        <option label="warmińsko-mazurskie" value="14">
-                                                            warmińsko-mazurskie</option>
-                                                        <option label="wielkopolskie" value="15">
-                                                            wielkopolskie</option>
-                                                        <option label="zachodniopomorskie" value="16">
-                                                            zachodniopomorskie</option>
-                                                    </select>
-                                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Województwo:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="region">
+                                                    <option label="wybierz" value="" selected="selected">
+                                                        wybierz</option>
+                                                    <option label="dolnośląskie" value="3">
+                                                        dolnośląskie</option>
+                                                    <option label="kujawsko-pomorskie" value="4">
+                                                        kujawsko-pomorskie</option>
+                                                    <option label="lubelskie" value="6">
+                                                        lubelskie</option>
+                                                    <option label="lubuskie" value="7">
+                                                        lubuskie</option>
+                                                    <option label="łódzkie" value="5">
+                                                        łódzkie</option>
+                                                    <option label="małopolskie" value="1">
+                                                        małopolskie</option>
+                                                    <option label="mazowieckie" value="8">
+                                                        mazowieckie</option>
+                                                    <option label="opolskie" value="9">
+                                                        opolskie</option>
+                                                    <option label="podkarpackie" value="10">
+                                                        podkarpackie</option>
+                                                    <option label="podlaskie" value="11">
+                                                        podlaskie</option>
+                                                    <option label="pomorskie" value="12">
+                                                        pomorskie</option>
+                                                    <option label="śląskie" value="2">
+                                                        śląskie</option>
+                                                    <option label="świętokrzyskie" value="13">
+                                                        świętokrzyskie</option>
+                                                    <option label="warmińsko-mazurskie" value="14">
+                                                        warmińsko-mazurskie</option>
+                                                    <option label="wielkopolskie" value="15">
+                                                        wielkopolskie</option>
+                                                    <option label="zachodniopomorskie" value="16">
+                                                        zachodniopomorskie</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- info section -->
-                                <div class="col-md-3 col-md-offset-1 col-sm-4">
-                                    <div>
-                                        <h6>
-                                            Roczna suma energii promieniowania słonecznego:
-                                        </h6>
-                                        <h1>
-                                            value here <small>kWh/m²</small>
-                                        </h1>
+                            </div>
+                            <!-- info section -->
+                            <div class="col-md-3 col-md-offset-1 col-sm-4">
+                                <div>
+                                    <h6>
+                                        Roczna suma energii promieniowania słonecznego:
+                                    </h6>
+                                    <h1>
+                                        value here <small>kWh/m²</small>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- energy -->
+                    <div id="energy-tab">
+                        <div class="row">
+                            <!-- form section -->
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Sposób podania zużycia energii:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <select class="form-control" name="countByType">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="Rachunek za energię elektryczną"
+                                                        value="byEnergyUsageBill">
+                                                        Rachunek za energię elektryczną
+                                                    </option>
+                                                    <option label="Liczba mieszkańców budynku" value="byPeopleCount">
+                                                        Liczba
+                                                        mieszkańców budynku</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Okres jaki pokrywa rachunek za energię:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="energyPeriodUnit">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="miesiąc" value="month01">
+                                                        miesiąc</option>
+                                                    <option label="dwa miesiące" value="month02">
+                                                        dwa miesiące</option>
+                                                    <option label="rok" value="year">
+                                                        rok</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Zużycie energii elektrycznej w wybranym okresie:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="number" min="1" max="10" step="0.1" class="form-control"
+                                                    name="energyUsageInPeriod">
+                                                <span>kWh</span>
+                                            </div>
+                                            <div class="text-info">
+                                                <small>
+                                                    Kreator został przygotowany dla
+                                                    instalacji do 10 kW. W celu uzyskania
+                                                    oferty na większe zapotrzebowanie
+                                                    skontaktuj się z działem fotowoltaiki.
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Kwota brutto z rachunku w wybranym okresie:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" name="energyCostInPeriod">
+                                                <span>zł</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Liczba mieszkańców budynku:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" name="flatPeopleCount">
+                                                <span>os.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- info section -->
+                            <div class="col-md-3 col-md-offset-1 col-sm-4">
+                                <div>
+                                    <h6>
+                                        Roczne zużycie energii:
+                                    </h6>
+                                    <h1>
+                                        value here <small>kWh</small>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Roczny koszt energii brutto:
+                                    </h6>
+                                    <h1>
+                                        value here <small>zł</small>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Średni roczny koszt kWh brutto:
+                                    </h6>
+                                    <h1>
+                                        value here <small>zł</small>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Średnia roczna cena sprzedaży
+                                        energii elektrycznej z
+                                        Towarowej Giełdy Energii brutto:
+                                    </h6>
+                                    <h1>
+                                        value here <small>zł</small>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- building -->
+                    <div id="building-tab">
+                        <div class="row">
+                            <!-- form section -->
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Orientacja paneli względem stron świata:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="buildingOrientation">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="wschód" value="e">wschód
+                                                    </option>
+                                                    <option label="zachód" value="w">zachód
+                                                    </option>
+                                                    <option label="południe" value="s">południe
+                                                    </option>
+                                                    <option label="południowy wschód" value="se">południowy wschód
+                                                    </option>
+                                                    <option label="południowy zachód" value="sw">południowy zachód
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Powierzchnia użytkowa budynku mieszkalnego:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" name="buildingSurface">
+                                                <span>m<sup>2</sup></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Miejsce zabudowy paneli:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="montagePlace">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="dach płaski" value="flat">
+                                                        dach płaski</option>
+                                                    <option label="dach pochyły" value="slanted">
+                                                        dach pochyły</option>
+                                                    <option label="grunt" value="ground">
+                                                        grunt</option>
+                                                </select>
+                                            </div>
+                                            <div class="text-info">
+                                                <small>Panele PV zostaną
+                                                    ustawione na konstrukcji wsporczej pod
+                                                    kątem
+                                                    30 stopni</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Kąt nachylenia dachu:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <select class="form-control" name="roofAngle">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="30" value="st30">30
+                                                    </option>
+                                                    <option label="45" value="st45">45
+                                                    </option>
+                                                    <option label="60" value="st60">60
+                                                    </option>
+                                                </select>
+                                                <span>°</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Rodzaj pokrycia dachu:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="roofingType">
+                                                    <option label="wybierz" value="" selected="selected">wybierz
+                                                    </option>
+                                                    <option label="blachodachówka" value="tinRoofing">blachodachówka
+                                                    </option>
+                                                    <option label="dachówka" value="roofTile">dachówka
+                                                    </option>
+                                                    <option label="blacha na rąbek" value="seamPlate">blacha na
+                                                        rąbek
+                                                    </option>
+                                                    <option label="lacha trapezowa" value="trapezoidalSheet">blacha
+                                                        trapezowa
+                                                    </option>
+                                                    <option label="gont bitumiczny" value="asphaltShingle">gont
+                                                        bitumiczny
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr>
-                        <!-- energy -->
-                        <div id="energy-tab">
-                            <div class="row">
-                                <!-- form section -->
-                                <div class="col-sm-8">
+                    </div>
+                    <hr>
+                    <!-- installation -->
+                    <div id="installation-tab">
+                        <div class="row">
+                            <!-- form section -->
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Czy chcesz zmodyfikować dobraną instalację?:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <select class="form-control" name="adjustInstallation">
+                                                    <option label="nie" value="n" selected="selected">nie
+                                                    </option>
+                                                    <option label="tak" value="y">tak
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Ilość paneli:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <input name="panelQuantity" type="number" class="form-control" step="1">
+                                                <span>szt.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-6 control-label">
+                                            Typ inwertera:
+                                        </label>
+                                        <div class="col-sm-6">
+                                            <div class="input-control">
+                                                <select class="form-control" name="inverterType">
+                                                    <option label="1,0 kW, 1-fazowy" value="kwp1" selected="selected">
+                                                        1,0 kW, 1-fazowy
+                                                    </option>
+                                                    <option label="2,0 kW, 1-fazowy" value="kwp2">2,0 kW, 1-fazowy
+                                                    </option>
+                                                    <option label="3,0 kW, 1-fazowy" value="kwp3">3,0 kW, 1-fazowy
+                                                    </option>
+                                                    <option label="3,0 kW, 3-fazowy" value="kwp3|3">3,0 kW, 3-fazowy
+                                                    </option>
+                                                    <option label="5,0 kW, 3-fazowy" value="kwp5">5,0 kW, 3-fazowy
+                                                    </option>
+                                                    <option label="6,0 kW, 3-fazowy" value="kwp6">6,0 kW, 3-fazowy
+                                                    </option>
+                                                    <option label="8,0 kW, 3-fazowy" value="kwp8">8,0 kW, 3-fazowy
+                                                    </option>
+                                                    <option label="10,0 kW, 3-fazowy" value="kwp10">10,0 kW,
+                                                        3-fazowy
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- info section -->
+                            <div class="col-md-3 col-md-offset-1 col-sm-4">
+                                <div>
+                                    <div class="col-xs-6 text-center">
+                                        <h5>Nasza propozycja</h5>
+                                    </div>
+                                    <div class="col-xs-12 text-center">
+                                        <h5>Twój dobór</h5>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Ilość paneli:
+                                    </h6>
+                                    <h1>
+                                        value here <small>szt.</small>
+                                    </h1>
+                                    <h1>
+                                        value here <small>szt.</small>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Moc szczytowa instalacji:
+                                    </h6>
+                                    <h1>
+                                        value here <small>kWp</small>
+                                    </h1>
+                                    <h1>
+                                        value here <small>kWp</small>
+                                    </h1>
+                                </div>
+                                <div>
+                                    <h6>
+                                        Bezpośrednia konsumpcja energii z PV:
+                                    </h6>
+                                    <h1>
+                                        value here <small>%</small>
+                                    </h1>
+                                    <h1>
+                                        value here <small>%</small>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- analyze -->
+                    <div id="analyze-tab">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-12">
+                                <!-- analyze control panel -->
+                                <div class="financing-panel">
+                                    <div>
+                                        <h3>
+                                            Podstawa analizy:
+                                        </h3>
+                                    </div>
                                     <div class="row">
+                                        <!-- additional financing options -->
                                         <div class="form-group">
                                             <label class="col-sm-6 control-label">
-                                                Sposób podania zużycia energii:
+                                                Kwota dofinansowania:
                                             </label>
                                             <div class="col-sm-6">
                                                 <div class="input-group">
-                                                    <select class="form-control" name="countByType">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="Rachunek za energię elektryczną"
-                                                            value="byEnergyUsageBill">
-                                                            Rachunek za energię elektryczną
-                                                        </option>
-                                                        <option label="Liczba mieszkańców budynku"
-                                                            value="byPeopleCount">
-                                                            Liczba
-                                                            mieszkańców budynku</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Okres jaki pokrywa rachunek za energię:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="energyPeriodUnit">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="miesiąc" value="month01">
-                                                            miesiąc</option>
-                                                        <option label="dwa miesiące" value="month02">
-                                                            dwa miesiące</option>
-                                                        <option label="rok" value="year">
-                                                            rok</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Zużycie energii elektrycznej w wybranym okresie:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <input type="number" min="1" max="10" step="0.1"
-                                                        class="form-control" name="energyUsageInPeriod">
-                                                    <span>kWh</span>
-                                                </div>
-                                                <div class="text-info">
-                                                    <small>
-                                                        Kreator został przygotowany dla
-                                                        instalacji do 10 kW. W celu uzyskania
-                                                        oferty na większe zapotrzebowanie
-                                                        skontaktuj się z działem fotowoltaiki.
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Kwota brutto z rachunku w wybranym okresie:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" name="energyCostInPeriod">
+                                                    <input type="number" class="form-control" name="dofinansowanieValue"
+                                                        min="0" max="">
                                                     <span>zł</span>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- additional options -->
                                         <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Liczba mieszkańców budynku:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" name="flatPeopleCount">
-                                                    <span>os.</span>
+                                            <div class="col-xs-12">
+                                                <div class="col-xs-10 pl-none text-left">
+                                                    <span>
+                                                        Roczny wzrost ceny energii
+                                                    </span>
                                                 </div>
+                                                <div class="col-xs-2 text-right">
+                                                    <strong> value here </strong>
+                                                    <span>%</span>
+                                                </div>
+                                                <input type="range" min="0" max="15" value="8" step="1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <div class="col-xs-10 pl-none text-left">
+                                                    <span>
+                                                        Bezpośrednia konsumpcja energii z PV
+                                                    </span>
+                                                </div>
+                                                <div class="col-xs-2 text-right">
+                                                    <strong> value here </strong>
+                                                    <span>%</span>
+                                                </div>
+                                                <input type="range" min="5" max="100" value="20" step="1">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- info section -->
-                                <div class="col-md-3 col-md-offset-1 col-sm-4">
+                            </div>
+                            <div class="col-md-5 col-sm-12">
+                                <!-- summary -->
+                                <div class="analyze-summary-panel">
                                     <div>
-                                        <h6>
-                                            Roczne zużycie energii:
-                                        </h6>
-                                        <h1>
-                                            value here <small>kWh</small>
-                                        </h1>
+                                        <h2>
+                                            <strong>Podsumowanie</strong>
+                                        </h2>
                                     </div>
                                     <div>
-                                        <h6>
-                                            Roczny koszt energii brutto:
-                                        </h6>
-                                        <h1>
-                                            value here <small>zł</small>
-                                        </h1>
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        Cena instalacji fotowoltaicznej wraz z montażem
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            <strong>
+                                                                <span>value here</span>
+                                                                <span>zł</span>
+                                                            </strong>
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Wartość inwestycji w instalację PV
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            <strong>
+                                                                <span>value here</span>
+                                                                <span>zł</span>
+                                                            </strong>
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Energia wytworzona przez instalację PV *
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            <strong>
+                                                                <span>value here</span>
+                                                                <span>MWh</span>
+                                                            </strong>
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Okres zwrotu inwestycji w instalację PV
+                                                    </td>
+                                                    <td>
+                                                        <h4>
+                                                            <strong>
+                                                                <span>value here</span>
+                                                                <span></span>
+                                                            </strong>
+                                                        </h4>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div>
-                                        <h6>
-                                            Średni roczny koszt kWh brutto:
-                                        </h6>
-                                        <h1>
-                                            value here <small>zł</small>
-                                        </h1>
-                                    </div>
-                                    <div>
-                                        <h6>
-                                            Średnia roczna cena sprzedaży
-                                            energii elektrycznej z
-                                            Towarowej Giełdy Energii brutto:
-                                        </h6>
-                                        <h1>
-                                            value here <small>zł</small>
-                                        </h1>
+                                    <div class="text-center">
+                                        <small>
+                                            * dla 25 letniego objętego gwarancją okresu eksploatacji
+                                        </small>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr>
-                        <!-- building -->
-                        <div id="building-tab">
-                            <div class="row">
-                                <!-- form section -->
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Orientacja paneli względem stron świata:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="buildingOrientation">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="wschód" value="e">wschód
-                                                        </option>
-                                                        <option label="zachód" value="w">zachód
-                                                        </option>
-                                                        <option label="południe" value="s">południe
-                                                        </option>
-                                                        <option label="południowy wschód" value="se">południowy wschód
-                                                        </option>
-                                                        <option label="południowy zachód" value="sw">południowy zachód
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Powierzchnia użytkowa budynku mieszkalnego:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <input type="number" class="form-control" name="buildingSurface">
-                                                    <span>m<sup>2</sup></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Miejsce zabudowy paneli:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="montagePlace">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="dach płaski" value="flat">
-                                                            dach płaski</option>
-                                                        <option label="dach pochyły" value="slanted">
-                                                            dach pochyły</option>
-                                                        <option label="grunt" value="ground">
-                                                            grunt</option>
-                                                    </select>
-                                                </div>
-                                                <div class="text-info">
-                                                    <small>Panele PV zostaną
-                                                        ustawione na konstrukcji wsporczej pod
-                                                        kątem
-                                                        30 stopni</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Kąt nachylenia dachu:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <select class="form-control" name="roofAngle">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="30" value="st30">30
-                                                        </option>
-                                                        <option label="45" value="st45">45
-                                                        </option>
-                                                        <option label="60" value="st60">60
-                                                        </option>
-                                                    </select>
-                                                    <span>°</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Rodzaj pokrycia dachu:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="roofingType">
-                                                        <option label="wybierz" value="" selected="selected">wybierz
-                                                        </option>
-                                                        <option label="blachodachówka" value="tinRoofing">blachodachówka
-                                                        </option>
-                                                        <option label="dachówka" value="roofTile">dachówka
-                                                        </option>
-                                                        <option label="blacha na rąbek" value="seamPlate">blacha na
-                                                            rąbek
-                                                        </option>
-                                                        <option label="lacha trapezowa" value="trapezoidalSheet">blacha
-                                                            trapezowa
-                                                        </option>
-                                                        <option label="gont bitumiczny" value="asphaltShingle">gont
-                                                            bitumiczny
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <!-- installation -->
-                        <div id="installation-tab">
-                            <div class="row">
-                                <!-- form section -->
-                                <div class="col-sm-8">
-                                    <div class="row">
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Czy chcesz zmodyfikować dobraną instalację?:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <select class="form-control" name="adjustInstallation">
-                                                        <option label="nie" value="n" selected="selected">nie
-                                                        </option>
-                                                        <option label="tak" value="y">tak
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Ilość paneli:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-group">
-                                                    <input name="panelQuantity" type="number" class="form-control"
-                                                        step="1">
-                                                    <span>szt.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-6 control-label">
-                                                Typ inwertera:
-                                            </label>
-                                            <div class="col-sm-6">
-                                                <div class="input-control">
-                                                    <select class="form-control" name="inverterType">
-                                                        <option label="1,0 kW, 1-fazowy" value="kwp1"
-                                                            selected="selected">
-                                                            1,0 kW, 1-fazowy
-                                                        </option>
-                                                        <option label="2,0 kW, 1-fazowy" value="kwp2">2,0 kW, 1-fazowy
-                                                        </option>
-                                                        <option label="3,0 kW, 1-fazowy" value="kwp3">3,0 kW, 1-fazowy
-                                                        </option>
-                                                        <option label="3,0 kW, 3-fazowy" value="kwp3|3">3,0 kW, 3-fazowy
-                                                        </option>
-                                                        <option label="5,0 kW, 3-fazowy" value="kwp5">5,0 kW, 3-fazowy
-                                                        </option>
-                                                        <option label="6,0 kW, 3-fazowy" value="kwp6">6,0 kW, 3-fazowy
-                                                        </option>
-                                                        <option label="8,0 kW, 3-fazowy" value="kwp8">8,0 kW, 3-fazowy
-                                                        </option>
-                                                        <option label="10,0 kW, 3-fazowy" value="kwp10">10,0 kW,
-                                                            3-fazowy
-                                                        </option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- info section -->
-                                <div class="col-md-3 col-md-offset-1 col-sm-4">
-                                    <div>
-                                        <div class="col-xs-6 text-center">
-                                            <h5>Nasza propozycja</h5>
-                                        </div>
-                                        <div class="col-xs-12 text-center">
-                                            <h5>Twój dobór</h5>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h6>
-                                            Ilość paneli:
-                                        </h6>
-                                        <h1>
-                                            value here <small>szt.</small>
-                                        </h1>
-                                        <h1>
-                                            value here <small>szt.</small>
-                                        </h1>
-                                    </div>
-                                    <div>
-                                        <h6>
-                                            Moc szczytowa instalacji:
-                                        </h6>
-                                        <h1>
-                                            value here <small>kWp</small>
-                                        </h1>
-                                        <h1>
-                                            value here <small>kWp</small>
-                                        </h1>
-                                    </div>
-                                    <div>
-                                        <h6>
-                                            Bezpośrednia konsumpcja energii z PV:
-                                        </h6>
-                                        <h1>
-                                            value here <small>%</small>
-                                        </h1>
-                                        <h1>
-                                            value here <small>%</small>
-                                        </h1>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <!-- analyze -->
-                        <div id="analyze-tab">
-                            <div class="row">
-                                <div class="col-md-7 col-sm-12">
-                                    <!-- analyze control panel -->
-                                    <div class="financing-panel">
-                                        <div>
-                                            <h3>
-                                                Podstawa analizy:
-                                            </h3>
-                                        </div>
-                                        <div class="row">
-                                            <!-- additional financing options -->
-                                            <div class="form-group">
-                                                <label class="col-sm-6 control-label">
-                                                    Kwota dofinansowania:
-                                                </label>
-                                                <div class="col-sm-6">
-                                                    <div class="input-group">
-                                                        <input type="number" class="form-control"
-                                                            name="dofinansowanieValue" min="0" max="">
-                                                        <span>zł</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- additional options -->
-                                            <div class="form-group">
-                                                <div class="col-xs-12">
-                                                    <div class="col-xs-10 pl-none text-left">
-                                                        <span>
-                                                            Roczny wzrost ceny energii
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-xs-2 text-right">
-                                                        <strong> value here </strong>
-                                                        <span>%</span>
-                                                    </div>
-                                                    <input type="range" min="0" max="15" value="8" step="1">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-xs-12">
-                                                    <div class="col-xs-10 pl-none text-left">
-                                                        <span>
-                                                            Bezpośrednia konsumpcja energii z PV
-                                                        </span>
-                                                    </div>
-                                                    <div class="col-xs-2 text-right">
-                                                        <strong> value here </strong>
-                                                        <span>%</span>
-                                                    </div>
-                                                    <input type="range" min="5" max="100" value="20" step="1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 col-sm-12">
-                                    <!-- summary -->
-                                    <div class="analyze-summary-panel">
-                                        <div>
-                                            <h2>
-                                                <strong>Podsumowanie</strong>
-                                            </h2>
-                                        </div>
-                                        <div>
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            Cena instalacji fotowoltaicznej wraz z montażem
-                                                        </td>
-                                                        <td>
-                                                            <h4>
-                                                                <strong>
-                                                                    <span>value here</span>
-                                                                    <span>zł</span>
-                                                                </strong>
-                                                            </h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            Wartość inwestycji w instalację PV
-                                                        </td>
-                                                        <td>
-                                                            <h4>
-                                                                <strong>
-                                                                    <span>value here</span>
-                                                                    <span>zł</span>
-                                                                </strong>
-                                                            </h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            Energia wytworzona przez instalację PV *
-                                                        </td>
-                                                        <td>
-                                                            <h4>
-                                                                <strong>
-                                                                    <span>value here</span>
-                                                                    <span>MWh</span>
-                                                                </strong>
-                                                            </h4>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            Okres zwrotu inwestycji w instalację PV
-                                                        </td>
-                                                        <td>
-                                                            <h4>
-                                                                <strong>
-                                                                    <span>value here</span>
-                                                                    <span></span>
-                                                                </strong>
-                                                            </h4>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="text-center">
-                                            <small>
-                                                * dla 25 letniego objętego gwarancją okresu eksploatacji
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- chart and additional info -->
-                            <div class="row">
-                                <!-- summary chart -->
-                                <h2>
-                                    <small>
-                                        Opłacalność
-                                    </small>
-                                </h2>
-                                <div id="chart">
-                                    chart here
-                                </div>
+                        <!-- chart and additional info -->
+                        <div class="row">
+                            <!-- summary chart -->
+                            <h2>
+                                <small>
+                                    Opłacalność
+                                </small>
+                            </h2>
+                            <div id="chart">
+                                chart here
                             </div>
                         </div>
                     </div>
-                    <!-- navigation -->
-                    <div>
-                        <a>Cofnij</a>
-                        <a>Dalej</a>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <!-- navigation -->
+                <div>
+                    <a>Cofnij</a>
+                    <a>Dalej</a>
+                </div>
+            </form>
         </div>
     </main>
 </body>
