@@ -32,6 +32,11 @@
     font-style: normal;
 }
 
+.text-inter {
+    font-family: 'Inter';
+    font-style: normal;
+}
+
 .step-button {
     background: #006969;
     border-radius: 7px;
@@ -40,4 +45,47 @@
 
 .step-button-active {
     background: #45A77B;
+}
+
+.grey {
+    background: #D9D9D9;
+}
+
+.info {
+    border-width: 0px 0px 5px 0px;
+    border-style: solid;
+    border-color: #006969;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #006969;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #006969;
+    cursor: pointer;
+}
+
+.navigation-button {
+    background: #FFFFFF;
+    border: 3px solid #006969;
+    border-radius: 50px;
 }
