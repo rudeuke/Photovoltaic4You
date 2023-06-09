@@ -4,8 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clear": "rm -rf build/; rm -rf .parcel-cache/;",
+    "dev": "parcel src/index.html",
+    "build": "npm run clear; parcel build src/index.html --dist-dir build/"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
 }
