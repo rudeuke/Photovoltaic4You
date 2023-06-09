@@ -2,7 +2,7 @@
     font-family: 'Aclonica';
     font-style: normal;
     font-weight: 400;
-    font-size: 52px;
+    font-size: 3vw;
     line-height: 59px;
     color: #0B1A26;
 }
@@ -56,7 +56,8 @@
     border-style: solid;
     border-color: #006969;
     border-radius: 7px;
-    width: 100%;
+    /* width: fit-content; */
+    width: auto;
 }
 
 .slider {

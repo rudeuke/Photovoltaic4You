@@ -18,9 +18,14 @@
 
 <body id="page-top">
     <header>
-        <nav class="navbar navbar-expand-lg height py-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-4">
             <div class="container">
                 <a class="title navbar-brand" href="#page-top">Photovoltaic4You</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1 px-3">
@@ -32,14 +37,16 @@
                                 class="nav-link py-3 px-0 px-lg-3 rounded active nav-menu">Informacje</a>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1 px-3">
-                            <a href="onas.html" class="nav-link py-3 px-0 px-lg-3 rounded active nav-menu">O nas</a>
+                            <a href="onas.html" class="nav-link py-3 px-0 px-lg-3 rounded active nav-menu" style="overflow: hidden;
+                        white-space: nowrap;">O nas</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <img class="baner-border img-fluid" src="img/house.jpg" alt="Wizualizacja fotowoltaiki na dachu">
+        <img class="baner-border img-fluid w-100" src="img/house.jpg" alt="Wizualizacja fotowoltaiki na dachu">
     </header>
+
 
     <main class="bg-light">
         <div class="container">
@@ -51,28 +58,23 @@
                 <!-- form steps -->
                 <div class="container">
                     <div class="row">
-                        <div class="col px-0">
-                            <button class="step-button step-button-active text-white w-100 p-3">
+                        <div class="col-12 col-md px-0">
+                            <button class="step-button step-button-active text-white w-100 h-100 p-3">
                                 Dane użytkownika
                             </button>
                         </div>
-                        <div class="col px-0">
-                            <button class="step-button text-white w-100 p-3">
+                        <div class="col-12 col-md px-0">
+                            <button class="step-button text-white w-100 h-100 p-3">
                                 Zużycie energii
                             </button>
                         </div>
-                        <div class="col px-0">
-                            <button class="step-button text-white w-100 p-3">
-                                Zabudowa paneli
-                            </button>
-                        </div>
-                        <div class="col px-0">
-                            <button class="step-button text-white w-100 p-3">
+                        <div class="col-12 col-md px-0">
+                            <button class="step-button text-white w-100 h-100 p-3">
                                 Parametry instalacji
                             </button>
                         </div>
-                        <div class="col px-0">
-                            <button class="step-button text-white w-100 p-3">
+                        <div class="col-12 col-md px-0">
+                            <button class="step-button text-white w-100 h-100 p-3">
                                 Analiza opłacalności
                             </button>
                         </div>
@@ -82,14 +84,13 @@
                 <hr>
                 <div class="tab-content">
                     <!-- user -->
-                    <div id="user-tab">
+                    <div id="user-tab" class="container">
                         <div class="row d-flex justify-content-between">
                             <!-- form section -->
-                            <div class="col-sm-8">
+                            <div class="col-md-8 col-sm-12">
                                 <div class="form-group">
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Województwo:
                                         </label>
                                         <div class="col-sm-6">
@@ -136,8 +137,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Typ użytkownika:
                                         </label>
                                         <div class="col-sm-6">
@@ -159,11 +159,8 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Odliczam VAT od ceny zakupu instalacji
-                                            fotowoltaicznej oraz kosztów energii
-                                            elektrycznej:
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                            Odliczam VAT od ceny zakupu instalacji fotowoltaicznej oraz kosztów energii elektrycznej:
                                         </label>
                                         <div class="col-sm-6">
                                             <div class="input-control">
@@ -181,7 +178,7 @@
                                 </div>
                             </div>
                             <!-- info section -->
-                            <div class="col-3 p-3 px-2">
+                            <div class="col-md-3 col-sm-12 p-3 px-2">
                                 <div class="p-3 text-end grey info">
                                     <div class="py-3">
                                         <h6>
@@ -197,55 +194,39 @@
                     </div>
                     <hr>
                     <!-- energy -->
-                    <div id="energy-tab">
+                    <div id="energy-tab" class="container">
                         <div class="row d-flex justify-content-between">
                             <!-- form section -->
-                            <div class="col-sm-8">
+                            <div class="col-md-8 col-sm-12">
                                 <div class="form-group">
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Sposób podania zużycia energii:
                                         </label>
                                         <div class="col-sm-6">
                                             <div class="input-group">
-                                                <select class="form-control grey grey" name="countByType">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="Rachunek za energię elektryczną"
-                                                        value="byEnergyUsageBill">
-                                                        Rachunek za energię elektryczną
-                                                    </option>
-                                                    <option label="Liczba mieszkańców budynku" value="byPeopleCount">
-                                                        Liczba
-                                                        mieszkańców budynku</option>
+                                                <select class="form-control grey" name="countByType">
+                                                    <option label="wybierz" value="" selected="selected">wybierz</option>
+                                                    <!-- Opcje wyboru sposobu podania zużycia energii -->
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Okres jaki pokrywa rachunek za energię:
                                         </label>
                                         <div class="col-sm-6">
                                             <div class="input-control">
                                                 <select class="form-control grey" name="energyPeriodUnit">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="miesiąc" value="month01">
-                                                        miesiąc</option>
-                                                    <option label="dwa miesiące" value="month02">
-                                                        dwa miesiące</option>
-                                                    <option label="rok" value="year">
-                                                        rok</option>
+                                                    <option label="wybierz" value="" selected="selected">wybierz</option>
+                                                    <!-- Opcje wyboru okresu pokrywającego rachunek za energię -->
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Zużycie energii elektrycznej w wybranym okresie: (kWh)
                                         </label>
                                         <div class="col-sm-6">
@@ -256,16 +237,13 @@
                                         </div>
                                         <div class="text-info text-center">
                                             <small>
-                                                Kreator został przygotowany dla
-                                                instalacji do 10 kW. W celu uzyskania
-                                                oferty na większe zapotrzebowanie
-                                                skontaktuj się z działem fotowoltaiki.
+                                                Kreator został przygotowany dla instalacji do 10 kW. W celu uzyskania oferty na większe
+                                                zapotrzebowanie skontaktuj się z działem fotowoltaiki.
                                             </small>
                                         </div>
                                     </div>
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Kwota brutto z rachunku w wybranym okresie: (zł)
                                         </label>
                                         <div class="col-sm-6">
@@ -276,173 +254,36 @@
                                         </div>
                                     </div>
                                     <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                             Liczba mieszkańców budynku:
                                         </label>
                                         <div class="col-sm-6">
                                             <div class="input-group">
-                                                <input type="number" min="1" max="15" placeholder="-"
-                                                    class="form-control grey" name="flatPeopleCount">
+                                                <input type="number" min="1" max="15" placeholder="-" class="form-control grey"
+                                                    name="flatPeopleCount">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!-- info section -->
-                            <div class="col-3 p-3 px-2">
+                            <div class="col-md-3 col-sm-12 p-3 px-2">
                                 <div class="p-3 text-end grey info">
                                     <div class="py-3">
-                                        <h6>
-                                            <b>Roczne zużycie energii:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>kWh</small>
-                                        </h6>
+                                        <h6><b>Roczne zużycie energii:</b></h6>
+                                        <h6>value here <small>kWh</small></h6>
                                     </div>
                                     <div class="py-3">
-                                        <h6>
-                                            <b>Roczny koszt energii brutto:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>zł</small>
-                                        </h6>
+                                        <h6><b>Roczny koszt energii brutto:</b></h6>
+                                        <h6>value here <small>zł</small></h6>
                                     </div>
                                     <div class="py-3">
-                                        <h6>
-                                            <b>Średni roczny koszt kWh brutto:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>zł</small>
-                                        </h6>
+                                        <h6><b>Średni roczny koszt kWh brutto:</b></h6>
+                                        <h6>value here <small>zł</small></h6>
                                     </div>
                                     <div class="py-3">
-                                        <h6>
-                                            <b>Średnia roczna cena sprzedaży
-                                                energii elektrycznej z
-                                                Towarowej Giełdy Energii brutto:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>zł</small>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- building -->
-                    <div id="building-tab">
-                        <div class="row d-flex justify-content-between">
-                            <!-- form section -->
-                            <div class="col-sm-8">
-                                <div class="form-group">
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Orientacja paneli względem stron świata:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-control">
-                                                <select class="form-control grey" name="buildingOrientation">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="wschód" value="e">wschód
-                                                    </option>
-                                                    <option label="zachód" value="w">zachód
-                                                    </option>
-                                                    <option label="południe" value="s">południe
-                                                    </option>
-                                                    <option label="południowy wschód" value="se">południowy wschód
-                                                    </option>
-                                                    <option label="południowy zachód" value="sw">południowy zachód
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="row py-3">
-                                        <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Powierzchnia użytkowa budynku mieszkalnego: (m<sup>2</sup>)
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input type="number" placeholder="-" class="form-control grey" name="buildingSurface">
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Miejsce zabudowy paneli:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-control">
-                                                <select class="form-control grey" name="montagePlace">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="dach płaski" value="flat">
-                                                        dach płaski</option>
-                                                    <option label="dach pochyły" value="slanted">
-                                                        dach pochyły</option>
-                                                    <option label="grunt" value="ground">
-                                                        grunt</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="text-info text-center">
-                                            <small>Panele PV zostaną
-                                                ustawione na konstrukcji wsporczej pod
-                                                kątem
-                                                30 stopni</small>
-                                        </div>
-                                    </div>
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Kąt nachylenia dachu:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <select class="form-control grey" name="roofAngle">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="30°" value="st30">30°
-                                                    </option>
-                                                    <option label="45°" value="st45">45°
-                                                    </option>
-                                                    <option label="60°" value="st60">60°
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Rodzaj pokrycia dachu:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-control">
-                                                <select class="form-control grey" name="roofingType">
-                                                    <option label="wybierz" value="" selected="selected">wybierz
-                                                    </option>
-                                                    <option label="blachodachówka" value="tinRoofing">blachodachówka
-                                                    </option>
-                                                    <option label="dachówka" value="roofTile">dachówka
-                                                    </option>
-                                                    <option label="blacha na rąbek" value="seamPlate">blacha na
-                                                        rąbek
-                                                    </option>
-                                                    <option label="lacha trapezowa" value="trapezoidalSheet">blacha
-                                                        trapezowa
-                                                    </option>
-                                                    <option label="gont bitumiczny" value="asphaltShingle">gont
-                                                        bitumiczny
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        <h6><b>Średnia roczna cena sprzedaży energii elektrycznej z Towarowej Giełdy Energii brutto:</b></h6>
+                                        <h6>value here <small>zł</small></h6>
                                     </div>
                                 </div>
                             </div>
@@ -451,198 +292,160 @@
                     <hr>
                     <!-- installation -->
                     <div id="installation-tab">
-                        <div class="row d-flex justify-content-between">
-                            <!-- form section -->
-                            <div class="col-sm-8">
-                                <div class="form-group">
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Czy chcesz zmodyfikować dobraną instalację?:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <select class="form-control grey" name="adjustInstallation">
-                                                    <option label="nie" value="n" selected="selected">nie
-                                                    </option>
-                                                    <option label="tak" value="y">tak
-                                                    </option>
-                                                </select>
+                        <div class="container">
+                            <div class="row d-flex justify-content-between">
+                                <!-- form section -->
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="form-group">
+                                        <div class="row py-3">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                                Czy chcesz zmodyfikować dobraną instalację?:
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <select class="form-control grey" name="adjustInstallation">
+                                                        <option label="nie" value="n" selected="selected">nie</option>
+                                                        <option label="tak" value="y">tak</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Ilość paneli:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-group">
-                                                <input name="panelQuantity" type="number" min="2" max="31"
-                                                    placeholder="-" class="form-control grey" step="1">
+                                        <div class="row py-3">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                                Ilość paneli:
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input name="panelQuantity" type="number" min="2" max="31" placeholder="-"
+                                                        class="form-control grey" step="1">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row py-3">
-                                        <label
-                                            class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
-                                            Typ inwertera:
-                                        </label>
-                                        <div class="col-sm-6">
-                                            <div class="input-control">
-                                                <select class="form-control grey" name="inverterType">
-                                                    <option label="1,0 kW, 1-fazowy" value="kwp1" selected="selected">
-                                                        1,0 kW, 1-fazowy
-                                                    </option>
-                                                    <option label="2,0 kW, 1-fazowy" value="kwp2">2,0 kW, 1-fazowy
-                                                    </option>
-                                                    <option label="3,0 kW, 1-fazowy" value="kwp3">3,0 kW, 1-fazowy
-                                                    </option>
-                                                    <option label="3,0 kW, 3-fazowy" value="kwp3|3">3,0 kW, 3-fazowy
-                                                    </option>
-                                                    <option label="5,0 kW, 3-fazowy" value="kwp5">5,0 kW, 3-fazowy
-                                                    </option>
-                                                    <option label="6,0 kW, 3-fazowy" value="kwp6">6,0 kW, 3-fazowy
-                                                    </option>
-                                                    <option label="8,0 kW, 3-fazowy" value="kwp8">8,0 kW, 3-fazowy
-                                                    </option>
-                                                    <option label="10,0 kW, 3-fazowy" value="kwp10">10,0 kW,
-                                                        3-fazowy
-                                                    </option>
-                                                </select>
+                                        <div class="row py-3">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                                Typ inwertera:
+                                            </label>
+                                            <div class="col-sm-6">
+                                                <div class="input-control">
+                                                    <select class="form-control grey" name="inverterType">
+                                                        <option label="1,0 kW, 1-fazowy" value="kwp1" selected="selected">1,0 kW, 1-fazowy</option>
+                                                        <option label="2,0 kW, 1-fazowy" value="kwp2">2,0 kW, 1-fazowy</option>
+                                                        <option label="3,0 kW, 1-fazowy" value="kwp3">3,0 kW, 1-fazowy</option>
+                                                        <option label="3,0 kW, 3-fazowy" value="kwp3|3">3,0 kW, 3-fazowy</option>
+                                                        <option label="5,0 kW, 3-fazowy" value="kwp5">5,0 kW, 3-fazowy</option>
+                                                        <option label="6,0 kW, 3-fazowy" value="kwp6">6,0 kW, 3-fazowy</option>
+                                                        <option label="8,0 kW, 3-fazowy" value="kwp8">8,0 kW, 3-fazowy</option>
+                                                        <option label="10,0 kW, 3-fazowy" value="kwp10">10,0 kW, 3-fazowy</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- info section -->
-                            <div class="col-3 p-3 px-2">
-                                <div class="p-3 text-end grey info">
-                                    <div class="row py-2 align-items-center">
-                                        <div class="col-6 text-center">
-                                            <h5>
-                                                <b>Nasza propozycja</b>
-                                            </h5>
+                                <!-- info section -->
+                                <div class="col-md-3 col-sm-12 p-3 px-2">
+                                    <div class="p-3 text-end grey info">
+                                        <div class="row py-2 align-items-center">
+                                            <div class="col-6 text-center">
+                                                <h5><b>Nasza propozycja</b></h5>
+                                            </div>
+                                            <div class="col-6 text-center">
+                                                <h5><b>Twój dobór</b></h5>
+                                            </div>
                                         </div>
-                                        <div class="col-6 text-center">
-                                            <h5>
-                                                <b>Twój dobór</b>
-                                            </h5>
+                                        <div class="py-3">
+                                            <div class="row text-center">
+                                                <h6><b>Ilość paneli:</b></h6>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>szt.</small></h6>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>szt.</small></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-3">
+                                            <div class="row text-center">
+                                                <h6><b>Moc szczytowa instalacji:</b></h6>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>kWp</small></h6>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>kWp</small></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="py-3">
+                                            <div class="row text-center">
+                                                <h6><b>Bezpośrednia konsumpcja energii z PV:</b></h6>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>%</small></h6>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <h6>value here <small>%</small></h6>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="py-3">
-                                        <div class="row text-center">
+                                    <div class="p-3 text-end grey info">
+                                        <div class="py-3">
                                             <h6>
                                                 <b>Ilość paneli:</b>
                                             </h6>
+                                            <h6>
+                                                value here <small>szt.</small>
+                                            </h6>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>szt.</small>
-                                                </h6>
-                                            </div>
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>szt.</small>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="py-3">
-                                        <div class="row text-center">
+                                        <div class="py-3">
                                             <h6>
                                                 <b>Moc szczytowa instalacji:</b>
                                             </h6>
+                                            <h6>
+                                                value here <small>kWp</small>
+                                            </h6>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>kWp</small>
-                                                </h6>
-                                            </div>
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>kWp</small>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="py-3">
-                                        <div class="row text-center">
+                                        <div class="py-3">
                                             <h6>
                                                 <b>Bezpośrednia konsumpcja energii z PV:</b>
                                             </h6>
+                                            <h6>
+                                                value here <small>%</small>
+                                            </h6>
                                         </div>
-                                        <div class="row align-items-center">
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>%</small>
-                                                </h6>
-                                            </div>
-                                            <div class="col-6 text-center">
-                                                <h6>
-                                                    value here <small>%</small>
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-3 text-end grey info">
-                                    <div class="py-3">
-                                        <h6>
-                                            <b>Ilość paneli:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>szt.</small>
-                                        </h6>
-                                    </div>
-                                    <div class="py-3">
-                                        <h6>
-                                            <b>Moc szczytowa instalacji:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>kWp</small>
-                                        </h6>
-                                    </div>
-                                    <div class="py-3">
-                                        <h6>
-                                            <b>Bezpośrednia konsumpcja energii z PV:</b>
-                                        </h6>
-                                        <h6>
-                                            value here <small>%</small>
-                                        </h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <hr>
                     <!-- analyze -->
                     <div id="analyze-tab">
                         <div class="row d-flex justify-content-between">
-                            <div class="col-sm-10">
+                            <div class="col-12">
                                 <!-- analyze control panel -->
                                 <div class="financing-panel">
                                     <div class="form-group">
                                         <!-- additional financing options -->
                                         <div class="row py-3">
-                                            <label
-                                                class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                                 Kwota dofinansowania: (zł)
                                             </label>
                                             <div class="col-sm-6">
                                                 <div class="input-group">
-                                                    <input type="number" value="0" class="form-control grey"
-                                                        name="dofinansowanieValue" min="0" max="" step="0.01">
+                                                    <input type="number" value="0" class="form-control grey" name="dofinansowanieValue"
+                                                        min="0" max="" step="0.01">
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- additional options -->
                                         <div class="row py-3 d-flex justify-content-end">
-                                            <label
-                                                class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                                 Roczny wzrost ceny energii:
                                             </label>
                                             <div class="col-sm-6">
@@ -650,13 +453,11 @@
                                                 <span>%</span>
                                             </div>
                                             <div class="py-1 col-sm-9">
-                                                <input type="range" class="slider grey" min="0" max="15" value="8"
-                                                    step="1">
+                                                <input type="range" class="slider grey" min="0" max="15" value="8" step="1">
                                             </div>
                                         </div>
                                         <div class="row py-3 d-flex justify-content-end">
-                                            <label
-                                                class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
+                                            <label class="col-sm-6 d-flex align-items-center justify-content-end control-label text-end">
                                                 Bezpośrednia konsumpcja energii z PV:
                                             </label>
                                             <div class="col-sm-6">
@@ -664,8 +465,7 @@
                                                 <span>%</span>
                                             </div>
                                             <div class="py-1 col-sm-9">
-                                                <input type="range" class="slider grey" min="5" max="100" value="20"
-                                                    step="1">
+                                                <input type="range" class="slider grey" min="5" max="100" value="20" step="1">
                                             </div>
                                         </div>
                                     </div>
@@ -673,7 +473,7 @@
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <div class="py-5 col-sm-10 analyze-summary-panel">
+                            <div class="py-5 col-md-8 col-sm-12 analyze-summary-panel">
                                 <!-- summary -->
                                 <div>
                                     <h4>
@@ -748,10 +548,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 <hr>
                 <!-- navigation -->
-                <div class="row d-flex justify-content-around">
+                <div class="row d-flex justify-content-around my-4">
                     <div class="col-1">
                         <button class="navigation-button py-2 px-4">
                             Cofnij
@@ -766,6 +565,12 @@
             </form>
         </div>
     </main>
+
+    <footer class="py-4 text-center text-white bg-secondary">
+        <div class="container">
+            <small>Photovoltaic4You &copy; Opole 2023</small>
+        </div>
+    </footer>
 </body>
 
 </html>
